@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PAU 西班牙语语法句法 · 1小时冲刺复习卡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: system-ui, 'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif;
+            line-height: 1.5;
+            padding: 1.5rem;
+            color: #1e293b;
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* 头部 */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2b4c7c 100%);
+            color: white;
+            border-radius: 2rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+        }
+        .hero h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .hero h1 span {
+            background: #facc15;
+            color: #1e293b;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+        }
+        .hero p {
+            margin-top: 0.8rem;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-top: 1rem;
+        }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* 卡片网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* 通用卡片样式 */
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.1s ease, box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background: #f8fafc;
+            padding: 1rem 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0f3b5f;
+        }
+        .card-header i {
+            font-size: 1.4rem;
+        }
+        .card-content {
+            padding: 1.2rem 1.5rem 1.8rem;
+        }
+
+        /* 表格样式（简洁） */
+        .mini-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .mini-table th, .mini-table td {
+            text-align: left;
+            padding: 0.7rem 0.4rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .mini-table th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: #2c3e66;
+        }
+        .accent {
+            background-color: #fef9e3;
+            font-weight: 500;
+        }
+        .truco {
+            font-family: monospace;
+            background: #eef2ff;
+            padding: 0.2rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+        /* 练习区块 */
+        .practice-block {
+            background: #fef9e3;
+            border-left: 5px solid #eab308;
+        }
+        .row-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+        .btn-toggle {
+            background: #1e3c72;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: 0.1s;
+        }
+        .btn-toggle:hover {
+            background: #0f2b4f;
+        }
+        .answer {
+            background: #e6f7ec;
+            padding: 0.6rem 1rem;
+            border-radius: 1rem;
+            margin-top: 0.5rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .answer.show {
+            display: block;
+        }
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #475569;
+            background: #eef2ff;
+            padding: 0.8rem;
+            border-radius: 2rem;
+        }
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            .card-header {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <h1>📘 PAU 加泰罗尼亚 · 西班牙语句法 <span>3 puntos · 冲刺1h</span></h1>
+        <p>🎯 聚焦必考模式：5大功能 + 3类从句 + 限定/说明性定语 + 实战自测。无废话，只练考点。</p>
+        <div class="badge-group">
+            <div class="badge">⚡ CD / CI / CRV</div>
+            <div class="badge">📌  sustantiva / adjetiva / adverbial</div>
+            <div class="badge">🔍  especificativa vs explicativa</div>
+            <div class="badge">🧠  trucos de sustitución</div>
+        </div>
+    </div>
+
+    <!-- 网格区域 核心知识点 -->
+    <div class="grid">
+        <!-- 卡片1: 五大句法功能 -->
+        <div class="card">
+            <div class="card-header">
+                🧩 5大核心功能 · 必杀提问法
+            </div>
+            <div class="card-content">
+                <table class="mini-table">
+                    <thead>
+                        <tr><th>功能</th><th>关键提问</th><th>替换/识别</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>CD</strong><br>(直接宾语)</td><td>¿Qué? + verbo</td><td>→ lo/la/los/las</td></tr>
+                        <tr><td><strong>CI</strong><br>(间接宾语)</td><td>¿A quién? + verbo</td><td>→ le/les</td></tr>
+                        <tr><td><strong>CRV</strong><br>(介词宾语/格补语)</td><td>¿De/En/Con...? + verbo</td><td>动词要求特定介词: <span class="truco">hablar de, depender de, confiar en</span></td></tr>
+                        <tr><td><strong>CC</strong><br>(情景补语)</td><td>¿Dónde? ¿Cuándo? ¿Cómo? ¿Por qué?</td><td>lugar, tiempo, modo, causa...</td></tr>
+                        <tr><td><strong>Atributo</strong><br>(表语)</td><td>¿Cómo es? (ser/estar/parecer)</td><td>solo verbos copulativos</td></tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 12px; background:#eef2ff; border-radius: 16px; padding: 8px 12px;">
+                    💡 <strong>真题范例</strong> · <em>"No <u>EM</u> convenceràs"</em> → ¿A quién? → <strong>CI</strong><br>
+                    <em>"Van arribar <u>DESENES DE COPS</u>"</em> → ¿Cuántas veces? → <strong>CC</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- 卡片2: 三大从句识别(替换法) -->
+        <div class="card">
+            <div class="card-header">
+                🔗 三大从句 · 黄金替换法则
+            </div>
+            <div class="card-content">
+                <table class="mini-table">
+                    <thead><tr><th>从句类型</th><th>替换词</th><th>标志连词</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>SUBSTANTIVA</strong><br>(名词从句)</td><td><span class="truco">"ESTO"</span> / un SN</td><td>que, el hecho de que, si, dónde...</td></tr>
+                        <tr><td><strong>ADJETIVA (de relativo)</strong><br>(形容词/关系从句)</td><td><span class="truco">un adjetivo</span> / "el cual"</td><td>que, el cual, quien, cuyo</td></tr>
+                        <tr><td><strong>ADVERBIAL</strong><br>(副词从句)</td><td><span class="truco">adverbio</span> (ahora, allí, así)</td><td>cuando, donde, como, si, aunque, porque</td></tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 12px;">
+                    ✅ <strong>PAU 典型</strong>：<br>
+                    • <em>"Quiero <u>QUE VENGAS</u>"</em> → <em>"Quiero <strong>ESO</strong>"</em> → <strong>Substantiva (CD)</strong><br>
+                    • <em>"Salgo <u>CUANDO PUEDO</u>"</em> → <em>"Salgo <strong>ENTONCES</strong>"</em> → <strong>Adverbial temporal</strong><br>
+                    • <em>"El libro <u>QUE LEÍ</u> es bueno"</em> → <em>"El libro <strong>leído</strong>"</em> → <strong>Adjetiva</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- 卡片3: 限定vs说明 只看逗号！ -->
+        <div class="card">
+            <div class="card-header">
+                ✂️  Especificativa / Explicativa
+            </div>
+            <div class="card-content">
+                <div style="background:#fff0db; border-radius: 1rem; padding: 0.8rem; margin-bottom: 1rem;">
+                    🧠 <strong>唯一诀窍 → 看逗号</strong><br>
+                    ✔ <strong>有逗号</strong> = <strong>Explicativa</strong> (额外信息，删除不影响核心意义)<br>
+                    ✖ <strong>无逗号</strong> = <strong>Especificativa</strong> (限定先行词，删除会改变句意)
+                </div>
+                <table class="mini-table">
+                    <tr><td><strong>📌 例句</strong></td><td><strong>类型</strong></td></tr>
+                    <tr><td><em>Los alumnos, <u>que estudiaron mucho</u>, aprobaron</em></td><td>Explicativa (有逗号)</td></tr>
+                    <tr><td><em>Los alumnos <u>que estudiaron mucho</u> aprobaron</em></td><td>Especificativa (无逗号)</td></tr>
+                    <tr><td><em>La casa <u>que tiene jardín</u> es cara</em></td><td>Especificativa</td></tr>
+                </table>
+                <div class="truco" style="margin-top: 10px;">🎯 PAU真题句: <em>"... que LE AUMENTÓ LA FREDOR, se puso a trabajar"</em> → 带逗号 → Explicativa</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二部分: 快速自测 10个典型题目 交互显示答案 -->
+    <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+            📋 闪电自测 · 10个必做真题 (点击显示答案)
+        </div>
+        <div class="card-content">
+            <div style="display: flex; flex-direction: column; gap: 0.7rem;">
+                <!-- 预定义10个练习题 -->
+                <div><strong>1.</strong> <em>No <u>LO</u> entiendo.</em>  <button class="btn-toggle" data-ans="ans1">显示答案</button>
+                    <div id="ans1" class="answer">✅ <strong>CD</strong> (¿Qué entiendo? → LO)</div>
+                </div>
+                <div><strong>2.</strong> <em>Escribí <u>A MARÍA</u> una carta.</em> <button class="btn-toggle" data-ans="ans2">显示答案</button>
+                    <div id="ans2" class="answer">✅ <strong>CI</strong> (¿A quién escribí? → a María)</div>
+                </div>
+                <div><strong>3.</strong> <em>Confío <u>EN TI</u>.</em> <button class="btn-toggle" data-ans="ans3">显示答案</button>
+                    <div id="ans3" class="answer">✅ <strong>CRV</strong> (confiar en → ¿En quién?)</div>
+                </div>
+                <div><strong>4.</strong> <em>Llegó <u>TARDE</u>.</em> <button class="btn-toggle" data-ans="ans4">显示答案</button>
+                    <div id="ans4" class="answer">✅ <strong>CC de tiempo</strong> (¿Cuándo llegó?)</div>
+                </div>
+                <div><strong>5.</strong> <em>Ella <u>ES MÉDICA</u>.</em> <button class="btn-toggle" data-ans="ans5">显示答案</button>
+                    <div id="ans5" class="answer">✅ <strong>Atributo</strong> (verbo copulativo "ser" + cualidad)</div>
+                </div>
+                <div><strong>6.</strong> <em>Quiero <u>QUE VENGAS MAÑANA</u>.</em> <button class="btn-toggle" data-ans="ans6">显示答案</button>
+                    <div id="ans6" class="answer">✅ <strong>Subordinada SUSTANTIVA</strong> (función CD: “quiero eso”)</div>
+                </div>
+                <div><strong>7.</strong> <em>El coche <u>QUE COMPRÉ</u> es rojo.</em> <button class="btn-toggle" data-ans="ans7">显示答案</button>
+                    <div id="ans7" class="answer">✅ <strong>Adjetiva (de relativo) especificativa</strong> (sin comas, restringe)</div>
+                </div>
+                <div><strong>8.</strong> <em>Salgo <u>CUANDO TERMINO</u>.</em> <button class="btn-toggle" data-ans="ans8">显示答案</button>
+                    <div id="ans8" class="answer">✅ <strong>Adverbial temporal</strong> (equivale a “entonces”)</div>
+                </div>
+                <div><strong>9.</strong> <em>Los niños, <u>QUE ERAN ALTOS</u>, jugaron al baloncesto.</em> <button class="btn-toggle" data-ans="ans9">显示答案</button>
+                    <div id="ans9" class="answer">✅ <strong>Adjetiva EXPLICATIVA</strong> (presencia de comas, info extra)</div>
+                </div>
+                <div><strong>10.</strong> <em>Dependemos <u>DE LA FINANCIACIÓN</u>.</em> <button class="btn-toggle" data-ans="ans10">显示答案</button>
+                    <div id="ans10" class="answer">✅ <strong>CRV (Complemento de Régimen)</strong> → depender DE</div>
+                </div>
+            </div>
+            <hr>
+            <div class="truco" style="background:#eef2ff; padding: 0.5rem 1rem;">
+                📌 PAU考试提醒：选择题答错扣0.16分，不确定就留白！ 上述题型占3分中80%常考内容。
+            </div>
+        </div>
+    </div>
+
+    <!-- 易错警示卡 + 复习10分钟总结 -->
+    <div class="grid">
+        <div class="card">
+            <div class="card-header">
+                ⚠️ 消灭5大常见错误
+            </div>
+            <div class="card-content">
+                <ul style="margin-left: 1.2rem; display: flex; flex-direction: column; gap: 10px;">
+                    <li>🔴 <strong>混淆CD与CI</strong> → 记提问: <span class="truco">¿Qué?</span> = CD ;  <span class="truco">¿A quién?</span> = CI</li>
+                    <li>🔴 <strong>无视CRV</strong> → 动词+固定介词 (<em>hablar de, acordarse de, confiar en</em>) 必考</li>
+                    <li>🔴 <strong>把所有补语都叫CC</strong> → 先区分CD/CI/CRV，剩余再判断CC</li>
+                    <li>🔴 <strong>名词从句和形容词从句混淆</strong> → 替换<strong>“ESTO”</strong> vs 替代<strong>“el cual / adjetivo”</strong></li>
+                    <li>🔴 <strong>忽略逗号判断定语类型</strong> → 找到<em>“que”</em>前有没有逗号，立刻区分说明/限定</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card practice-block">
+            <div class="card-header">
+                🧠 终极速记卡 · 考前10分钟
+            </div>
+            <div class="card-content">
+                <div style="font-weight: 700; margin-bottom: 0.5rem;">🎯 三大黄金法则：</div>
+                <ol style="margin-left: 1.2rem; line-height: 1.6;">
+                    <li><strong>功能识别</strong> → <em>¿Qué? (CD) , ¿A quién? (CI) , ¿De/En qué? (CRV) , ¿Dónde/Cuándo? (CC)</em></li>
+                    <li><strong>从句类型</strong> → 名词性=Esto / 形容词性=un adjetivo / 副词性=adverbio</li>
+                    <li><strong>定语区分</strong> → 逗号 = explicativa (说明) ; 无逗号 = especificativa (限定)</li>
+                </ol>
+                <div style="background:#fff; border-radius: 16px; margin-top: 14px; padding: 8px; border:1px solid #ffe2b5;">
+                    📍 <strong>Examen real PAU 2023</strong><br>
+                    <em>"... que tanto éxito ha tenido y que todos repetimos..."</em><br>
+                    • 第二个<strong>que</strong> → función de <strong>CD</strong> (repetimos ¿qué?)<br>
+                    • 连接词 <strong>y</strong> → coordinación <strong>copulativa</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 额外包含时间方案和行动计划 -->
+    <div class="card">
+        <div class="card-header">
+            ⏱️ 1小时冲刺计划 · 行动地图
+        </div>
+        <div class="card-content">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
+                <div style="flex:1; background:#f1f5f9; border-radius: 1rem; padding: 0.8rem;">
+                    <strong>🔹 00-10 min</strong><br> 熟记5大功能提问表 + 替换法<br> (CD/CI/CRV/CC/Atributo)
+                </div>
+                <div style="flex:1; background:#f1f5f9; border-radius: 1rem; padding: 0.8rem;">
+                    <strong>🔹 10-25 min</strong><br> 三大从句识别 (sustantiva/adjetiva/adverbial) 配合替换法则
+                </div>
+                <div style="flex:1; background:#f1f5f9; border-radius: 1rem; padding: 0.8rem;">
+                    <strong>🔹 25-40 min</strong><br> 做透10道自测题+分析易错点<br> (点击显示答案强化记忆)
+                </div>
+                <div style="flex:1; background:#f1f5f9; border-radius: 1rem; padding: 0.8rem;">
+                    <strong>🔹 40-55 min</strong><br> 复习“限定vs说明” + 真题句型语法点
+                </div>
+                <div style="flex:1; background:#f1f5f9; border-radius: 1rem; padding: 0.8rem;">
+                    <strong>🔹 55-60 min</strong><br> 再次默念提问法口诀 & 快速测试不自信的题
+                </div>
+            </div>
+            <div style="margin-top: 1rem; background: #d9f0ec; border-radius: 1rem; padding: 0.6rem 1rem;">
+                💡 <strong>PAU 得分技巧</strong>：在 reflexión lingüística 部分，每道选择题必先定位动词，再针对划线成分提问；如果遇到“que”引导的长句，先判断能否用“esto”替换 → 能则是 substantiva，再考虑功能（Sujeto/CD...）；若修饰名词则为 adjetiva。
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        ✅ 此笔记浓缩 PAU 加泰罗尼亚（Castellano）句法3分考点 · 基于真实考试模式设计 <br>
+        🎓 反复练习测试 + 记住提问逻辑 = 稳妥拿下3 puntos
+    </div>
+</div>
+
+<script>
+    // 为所有按钮添加显示/隐藏答案的功能
+    const buttons = document.querySelectorAll('.btn-toggle');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const answerId = this.getAttribute('data-ans');
+            const answerDiv = document.getElementById(answerId);
+            if(answerDiv) {
+                // 切换显示
+                answerDiv.classList.toggle('show');
+                // 改变按钮文本（可选）
+                if(answerDiv.classList.contains('show')) {
+                    this.textContent = '隐藏答案';
+                } else {
+                    this.textContent = '显示答案';
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
